@@ -4,7 +4,6 @@ import com.juanmi.todoapi.persistence.entity.Task;
 import com.juanmi.todoapi.persistence.entity.TaskStatus;
 import com.juanmi.todoapi.service.TaskService;
 import com.juanmi.todoapi.service.dto.TaskInDTO;
-import io.swagger.models.Response;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
