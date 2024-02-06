@@ -1,6 +1,7 @@
 package com.juanmi.todoapi.controller;
 
 import com.juanmi.todoapi.persistence.entity.Task;
+import com.juanmi.todoapi.persistence.entity.TaskStatus;
 import com.juanmi.todoapi.service.TaskService;
 import com.juanmi.todoapi.service.dto.TaskInDTO;
 import org.springframework.web.bind.annotation.*;
@@ -25,5 +26,7 @@ public class TaskController { //Para acceder a la docu swagger -> localhost:8080
     @GetMapping
     public List<Task> findAllTask() { return this.taskService.findAllTask(); }
 
+    @GetMapping("/status/{status}") //@PathVariable la variable se lee en el path
+    public List<Task> findAllByTaskStatus(@PathVariable("status")TaskStatus status){ return this.taskService.findAllByTaskStatus(status); }
 
 }

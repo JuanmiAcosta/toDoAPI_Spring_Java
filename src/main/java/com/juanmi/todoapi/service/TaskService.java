@@ -2,6 +2,7 @@ package com.juanmi.todoapi.service;
 
 import com.juanmi.todoapi.mapper.TaskInDTOToTask;
 import com.juanmi.todoapi.persistence.entity.Task;
+import com.juanmi.todoapi.persistence.entity.TaskStatus;
 import com.juanmi.todoapi.persistence.repository.TaskRepository;
 import com.juanmi.todoapi.service.dto.TaskInDTO;
 import org.springframework.stereotype.Service;
@@ -28,5 +29,9 @@ public class TaskService {
 
     public List<Task> findAllTask(){
         return (this.repository.findAll());
+    }
+
+    public List<Task> findAllByTaskStatus(TaskStatus status){
+        return (this.repository.findAllByTaskStatus(status));
     }
 }
