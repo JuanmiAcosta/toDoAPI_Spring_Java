@@ -4,6 +4,8 @@ import com.juanmi.todoapi.persistence.entity.Task;
 import com.juanmi.todoapi.persistence.entity.TaskStatus;
 import com.juanmi.todoapi.service.TaskService;
 import com.juanmi.todoapi.service.dto.TaskInDTO;
+import io.swagger.models.Response;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -29,4 +31,15 @@ public class TaskController { //Para acceder a la docu swagger -> localhost:8080
     @GetMapping("/status/{status}") //@PathVariable la variable se lee en el path
     public List<Task> findAllByTaskStatus(@PathVariable("status")TaskStatus status){ return this.taskService.findAllByTaskStatus(status); }
 
+    @PatchMapping("/mark_as_finished/{id}")
+    public ResponseEntity<Void> markAsFinished(@PathVariable("id")Long id){
+        this.taskService.updateTaskAsFinished(id);
+        return ResponseEntity.noContent().build(); //Para mandar una respuesta HTTP | NoContent --> 204
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> delete(@PathVariable("id") Long id){
+        this.taskService.deleteById(id);
+        return ResponseEntity.noContent().build();
+    }
 }
