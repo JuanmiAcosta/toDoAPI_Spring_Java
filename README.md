@@ -1,6 +1,6 @@
 # To Do Api Java-Spring 📓
   
-En este primer acercamiento con Spring he aprendido más sobre Backend y cómo se construye realmente una API aplicando buenas prácticas buenas prácticas. Además también he trabajado con Swagger, una manera más directa y sencilla de ir testeando las diferentes funcionalidades de la misma.
+En este primer acercamiento con Spring he aprendido más sobre Backend y cómo se construye realmente una API aplicando buenas prácticas, aprehendiendo por el camino nuevos términos como ORM, qué es Hibernate, qué es un endpoint , etc. Además también he trabajado con Swagger, una manera más directa y sencilla de ir testeando las diferentes funcionalidades de la misma.
 
 Este diagrama de las diferentes comunicaciones de la arquitectura de la API muestra gráficamente la construcciónd e esta:
 
